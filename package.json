@@ -1,0 +1,28 @@
+{
+  "name": "bi",
+  "version": "1.0.0",
+  "description": "miniprogram of weixin",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zhen-code/shop-miniprogram.git"
+  },
+  "keywords": [
+    "mp"
+  ],
+  "author": "HQ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zhen-code/shop-miniprogram/issues"
+  },
+  "homepage": "https://github.com/Zhen-code/shop-miniprogram#readme",
+  "dependencies": {
+    "regenerator-runtime": "^0.13.5"
+  }
+}

@@ -1,0 +1,46 @@
+<view class="cates">
+    <view class="container">
+        <SearchInput></SearchInput>
+    </view>
+    <view class="category-content">
+        <scroll-view class="left-menu"
+                     scroll-y="true">
+            <view class="menu-item {{activeIndex===index?'active':''}}"
+                  wx:for="{{leftMenuList}}"
+                  wx:key="*this"
+                  data-index="{{index}}"
+                  bind:tap="tapLeftMenu"
+                >
+                {{item}}
+            </view>
+        </scroll-view>
+        <scroll-view class="right-content"
+                     scroll-y="true"
+                     scroll-top="{{scrollTop}}"
+        >
+            <view class="right-content-group"
+                  wx:for="{{rightContent}}"
+                  wx:for-item="item1"
+                  wx:for-index="index1"
+                  wx:key="cat_id"
+            >
+                <view class="content-right-title">
+                    <text class="delimeter">|</text>
+                    {{item1.cat_name}}
+                    <text class="delimeter">|</text>
+                </view>
+                <view class="content-right-list-wrap">
+                    <navigator class="content-right-list"
+                               wx:for="{{item1.children}}"
+                               wx:for-item="item2"
+                               wx:for-index="index2"
+                               wx:key="cat_id"
+                    >
+                        <image class="content-right-image" mode="widthFix" src="{{item2.cat_icon}}"></image>
+                        <text>{{item2.cat_name}}</text>
+                    </navigator>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
