@@ -1,0 +1,17 @@
+<view class="tabs">
+    <view class="tabs-title">
+    <view class="title-item {{item.active?'active':''}}"
+          wx:for="{{tabs}}"
+          wx:for-item="item"
+          wx:for-index="index"
+          wx:key="id"
+          data-index="{{index}}"
+          bind:tap="tabItemChange"
+    >
+        {{item.name}}
+    </view>
+    </view>
+    <view class="tabs-content">
+        <slot></slot>
+    </view>
+</view>
