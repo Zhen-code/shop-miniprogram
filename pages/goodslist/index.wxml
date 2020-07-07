@@ -2,13 +2,16 @@
 <tabs tabs="{{tabTitle}}" bind:tabItemChange="handleTabItemChange">
     <block wx:if="{{tabTitle[0].active}}">
     <view class="first-tab">
-    <navigator class="tab-wrap">
+    <navigator class="tab-wrap"
+               wx:for="{{goodsList}}"
+               wx:key="goods_id"
+    >
         <view class="image-wrapper">
-        <image mode="widthFix" src="http://image2.suning.cn/uimg/b2c/newcatentries/0070078057-000000000634917020_1_400x400.jpg"></image>
+        <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=648991067,2438414813&fm=26&gp=0.jpg'}}"></image>
         </view>
         <view class="info-wraper">
-            <view class="info-wraper-title">创维（Skyworth）42X6 42英寸10核智能酷开网络平板液晶电视（黑色）</view>
-            <view class="info-wraper-price">￥4.66</view>
+            <view class="info-wraper-title">{{item.goods_name}}</view>
+            <view class="info-wraper-price">￥{{item.goods_price}}</view>
         </view>
     </navigator>
     </view>

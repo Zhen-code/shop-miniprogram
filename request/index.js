@@ -1,4 +1,9 @@
+let ajaxTime = 0;
 export const request = (params)=>{
+    ajaxTime++;
+    wx.showLoading({
+        title: '加载中'
+    });
     return new Promise((resolve,reject)=>{
         const baseurl = 'https://api-hmugo-web.itheima.net/api/public/v1';
         wx.request({
@@ -9,11 +14,21 @@ export const request = (params)=>{
             },
             fail:(error)=>{
                 reject(error);
+            },
+            complete(){
+                ajaxTime--;
+                if(ajaxTime===0){
+                    wx.hideLoading();
+                }
             }
         })
     })
 };
 export const http = (params)=>{
+    ajaxTime++;
+    wx.showLoading({
+        title: '加载中'
+    });
     return new Promise((resolve,reject)=>{
         const baseurl = 'https://api-hmugo-web.itheima.net/api/public/v1';
         wx.request({
@@ -24,6 +39,12 @@ export const http = (params)=>{
             },
             fail:(error)=>{
                 reject(error);
+            },
+            complete(){
+                ajaxTime--;
+                if(ajaxTime===0){
+                    wx.hideLoading();
+                }
             }
         })
     })
