@@ -1,0 +1,49 @@
+.swiper-container swiper-item image{
+    width: 100vw;
+}
+.good_price{
+    padding: 10rpx;
+    color: #eb4450;
+}
+.goods-name{
+    display: flex;
+    flex-direction: row;
+}
+.good-top{
+    width: 90%;
+    padding: 10rpx;
+    border-top: 1rpx solid #000;
+    border-bottom: 1px solid #000;
+}
+.goods-title{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 22rpx;
+    text-overflow: ellipsis;
+}
+.goods-collect{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10rpx;
+    border-left: 4rpx solid #000;
+}
+.iconfont{
+    font-size: 20rpx;
+}
+.collect-text{
+    font-size: 20rpx;
+}
+.detail-desc{
+    font-size: 28rpx;
+    color: #eb4450;
+    padding: 10rpx;
+}
+rich-text {
+    font-size: 24rpx;
+    margin: 0 10rpx;
+}

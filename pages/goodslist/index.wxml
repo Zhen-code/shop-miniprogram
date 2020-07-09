@@ -5,6 +5,7 @@
     <navigator class="tab-wrap"
                wx:for="{{goodsList}}"
                wx:key="goods_id"
+               url="../goodsdetail/index?goods_id={{item.goods_id}}"
     >
         <view class="image-wrapper">
         <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=648991067,2438414813&fm=26&gp=0.jpg'}}"></image>

@@ -1,0 +1,27 @@
+<view class="view-detail">
+<swiper
+autoplay
+circular
+indicator-dots
+class="swiper-container"
+>
+<swiper-item
+wx:for="{{detailObj.pics}}"
+wx:key="pics_id"
+>
+<image mode="aspectFill" src="{{item.pics_big}}"></image>
+</swiper-item>
+</swiper>
+    <view class="good_price">￥{{detailObj.goods_price}}</view>
+    <view class="goods-name">
+        <view class="good-top">
+            <view class="goods-title">{{detailObj.goods_name}}</view>
+        </view>
+        <view class="goods-collect">
+            <view class="iconfont icon-xingxing"></view>
+            <view class="collect-text">收藏</view>
+        </view>
+    </view>
+    <view class="detail-desc">详情</view>
+    <rich-text nodes="{{detailObj.goods_introduce}}"></rich-text>
+</view>

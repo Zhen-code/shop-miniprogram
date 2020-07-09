@@ -40,6 +40,14 @@ Page({
             tabTitle
         })
     },
+    onPullDownRefresh() {
+        this.setData({
+            goodsList: []
+        });
+        this.detailParams.pagenum = 1;
+        this.getGoodsList();
+        wx.stopPullDownRefresh();
+    },
     onReachBottom() {
         if(this.detailParams.pagenum>=this.pageTotal){
             wx.showToast({
