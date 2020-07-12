@@ -1,0 +1,150 @@
+page{
+    padding-bottom: 90rpx;
+}
+.cart-wrap{
+    width: 100%;
+}
+.cart-btn{
+    width: 100%;
+    padding: 20rpx;
+}
+.cart-btn button{
+    width: 60%;
+}
+.cart-address{
+    display: flex;
+    flex-direction: row;
+    padding: 20rpx;
+}
+.cart-address-left{
+    flex: 5;
+}
+.cart-address-right{
+    flex: 3;
+    text-align: right;
+}
+.cart-content{
+    width: 100%;
+}
+.cart-title{
+    text-align: center;
+    font-size: 28rpx;
+    font-weight: bold;
+}
+.cart-main{
+    display: flex;
+    flex-direction: row;
+    padding: 10rpx 0;
+    border-bottom: 1rpx solid #ccc;
+}
+.chexkbox-wrap{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-img-wrap{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-img-wrap image{
+    width: 80%;
+    height: 100%;
+}
+.cart-count{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.cart-item-name{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    font-size: 28rpx;
+}
+.cart-price-count{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.price{
+    color: crimson;
+}
+.cart-btn-wrap{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 120rpx;
+}
+.cart-btn-left{
+    width: 34rpx;
+    height: 34rpx;
+    border: 2rpx solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-num-show{
+    font-size: 28rpx;
+    margin: 0 10rpx 0 10rpx;
+}
+.cart-btn-right{
+    width: 34rpx;
+    height: 34rpx;
+    border: 2rpx solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-tools{
+    width: 100%;
+    height: 90rpx;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+.all-check-wrap{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all-price-wrap{
+    flex: 4;
+    text-align: right;
+    padding-right: 8rpx;
+}
+.all-price{
+    font-size: 24rpx;
+}
+.price-text{
+    font-size: 32rpx;
+    font-weight: bold;
+    color: crimson;
+}
+.include-fare{
+    font-size: 24rpx;
+}
+.btn-price{
+    flex: 2;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 32rpx;
+    color: white;
+}
+
+
+
+

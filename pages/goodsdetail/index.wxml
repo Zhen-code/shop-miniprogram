@@ -8,6 +8,8 @@ class="swiper-container"
 <swiper-item
 wx:for="{{detailObj.pics}}"
 wx:key="pics_id"
+bind:tap="previewImage"
+data-url="{{item.pics_mid}}"
 >
 <image mode="aspectFill" src="{{item.pics_big}}"></image>
 </swiper-item>
@@ -24,4 +26,26 @@ wx:key="pics_id"
     </view>
     <view class="detail-desc">详情</view>
     <rich-text nodes="{{detailObj.goods_introduce}}"></rich-text>
+    <view class="bottom-tools">
+        <view class="tool-item">
+            <view class="iconfont icon-serve"></view>
+            <view>客服</view>
+            <button open-type="contact" class="contact-btn"></button>
+        </view>
+        <view class="tool-item">
+            <view class="iconfont icon-linedesign-10"></view>
+            <view>分享</view>
+            <button open-type="share" class="btn-share"></button>
+        </view>
+        <navigator url="/pages/cart/cart" open-type="switchTab" class="tool-item">
+            <view class="iconfont icon-huoche"></view>
+            <view>购物车</view>
+        </navigator>
+        <view class="tool-item btn-cart" bind:tap="addCart">
+        加入购物车
+        </view>
+        <view class="tool-item btn-buy">
+        购买
+        </view>
+    </view>
 </view>
