@@ -1,0 +1,3 @@
+<view>
+<button bind:tap="goAuth">登录</button>
+</view>

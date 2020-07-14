@@ -7,6 +7,17 @@ Page({
 
     },
     async handleUserInfo(e){
+        console.log(e);
+        if(e.detail.userInfo.nickName){
+            wx.setStorageSync('userInfo',e.detail.userInfo);
+            wx.navigateBack({
+                delta:1
+            })
+        }else{
+            wx.showToast({
+                title: '授权失败，请重新授权'
+            })
+        }
         const {encryptedData,iv,rawData,signature} = e.detail;
         const code = await login();
         // console.log(code)
