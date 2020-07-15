@@ -1,3 +1,55 @@
 <view>
-<button bind:tap="goAuth">登录</button>
+    <view class="login-wrap" wx:if="{{!userInfo.nickName}}">
+        <button bind:tap="goAuth">登录</button>
+    </view>
+    <view class="infoWrap" wx:else>
+        <image class="backavatar" src="{{userInfo.avatarUrl}}"></image>
+        <view class="avatar-name">
+            <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+            <view class="username">{{userInfo.nickName}}</view>
+        </view>
+    </view>
+    <view class="content-wrap">
+        <view class="content-wrap-top">
+        <navigator>
+            <view>0</view>
+            <view>收藏的店铺</view>
+        </navigator>
+        <navigator>
+            <view>0</view>
+            <view>收藏的商品</view>
+        </navigator>
+        <navigator>
+            <view>0</view>
+            <view>关注的商品</view>
+        </navigator>
+        <navigator>
+            <view>0</view>
+            <view>足迹</view>
+        </navigator>
+    </view>
+        <view class="content-wrap-bottom">
+            <view class="content-wrap-bottom-title">
+            我的订单
+            </view>
+            <view class="content-wrap-bottom-content">
+                <navigator>
+                    <view class="iconfont icon-jishiben"></view>
+                    <view class="order-text">全部订单</view>
+                </navigator>
+                <navigator>
+                    <view class="iconfont icon-gouwuchezhengpin"></view>
+                    <view class="order-text">待付款</view>
+                </navigator>
+                <navigator>
+                    <view class="iconfont icon-gouwuchezhengpin"></view>
+                    <view class="order-text">待收货</view>
+                </navigator>
+                <navigator>
+                    <view class="iconfont icon-qianyue"></view>
+                    <view class="order-text">退款/退货</view>
+                </navigator>
+            </view>
+        </view>
+    </view>
 </view>
