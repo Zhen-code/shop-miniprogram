@@ -19,8 +19,8 @@ data-url="{{item.pics_mid}}"
         <view class="good-top">
             <view class="goods-title">{{detailObj.goods_name}}</view>
         </view>
-        <view class="goods-collect">
-            <view class="iconfont icon-xingxing"></view>
+        <view class="goods-collect" bindtap="handleCollect">
+            <view class="iconfont {{isCollect?'icon-xingxing':'icon-wuxing'}}"></view>
             <view class="collect-text">收藏</view>
         </view>
     </view>

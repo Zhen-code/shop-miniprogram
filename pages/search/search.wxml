@@ -1,1 +1,14 @@
-<view>search</view>
+<view class="search-main">
+    <view class="search-wrap">
+        <input value="" placeholder="请输入搜索内容" bind:input="handleInput"></input>
+        <button class="search-btn">搜索</button>
+    </view>
+</view>
+<view class="content-wrapper">
+    <view class="content-item"
+          wx:for="{{goods}}"
+          wx:key="goods_id"
+    >
+       {{item.goods_name}}
+    </view>
+</view>

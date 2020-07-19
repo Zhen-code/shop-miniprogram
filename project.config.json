@@ -99,6 +99,21 @@
 					"id": -1,
 					"name": "个人中心",
 					"pathName": "pages/order/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单查询",
+					"pathName": "pages/card/index",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/search/search",
+					"pathName": "pages/search/search",
+					"query": "",
 					"scene": null
 				}
 			]

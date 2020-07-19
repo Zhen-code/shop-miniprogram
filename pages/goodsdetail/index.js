@@ -3,11 +3,19 @@ import {http} from "../../request/index";
 
 Page({
     data: {
-        detailObj: {}
+        detailObj: {},
+        isCollect:false
     },
     onLoad: function (options) {
         let {goods_id} = options;
         this.getGoodsDetail(goods_id);
+    },
+    onShow() {
+        const collect = wx.getStorageSync('collect')||[];
+        let isCollect = collect.some(i=>i.goods_id===this.goodsInfo.goods_id);
+        this.setData({
+            isCollect
+        })
     },
     goodsInfo:{},
     previewImage(e){
@@ -57,5 +65,21 @@ Page({
             title:'添加成功',
             type: 'success'
         });
+    },
+    handleCollect(){
+        let isCollect = false;
+        let collect = wx.getStorageSync('collect')||[];
+        let index = collect.findIndex(i=>i.goods_id===this.goodsInfo.goods_id);
+        if(index!==-1){
+            collect.splice(index,1);
+            isCollect = false;
+        }else{
+            collect.push(this.goodsInfo)
+            isCollect = true;
+        }
+        wx.setStorageSync('collect',collect);
+        this.setData({
+            isCollect
+        })
     }
 });

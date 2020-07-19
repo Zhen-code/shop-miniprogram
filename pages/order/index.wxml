@@ -15,8 +15,8 @@
             <view>0</view>
             <view>收藏的店铺</view>
         </navigator>
-        <navigator>
-            <view>0</view>
+        <navigator open-type="navigate" url="../collect/index">
+            <view>{{collectNums}}</view>
             <view>收藏的商品</view>
         </navigator>
         <navigator>
@@ -33,15 +33,15 @@
             我的订单
             </view>
             <view class="content-wrap-bottom-content">
-                <navigator>
+                <navigator open-type="navigate" url="../card/index?type=1">
                     <view class="iconfont icon-jishiben"></view>
                     <view class="order-text">全部订单</view>
                 </navigator>
-                <navigator>
+                <navigator open-type="navigate" url="../card/index?type=2">
                     <view class="iconfont icon-gouwuchezhengpin"></view>
                     <view class="order-text">待付款</view>
                 </navigator>
-                <navigator>
+                <navigator open-type="navigate" url="../card/index?type=3">
                     <view class="iconfont icon-gouwuchezhengpin"></view>
                     <view class="order-text">待收货</view>
                 </navigator>
@@ -49,6 +49,22 @@
                     <view class="iconfont icon-qianyue"></view>
                     <view class="order-text">退款/退货</view>
                 </navigator>
+            </view>
+
+        </view>
+        <view class="address-wrap">
+            收货地址管理
+        </view>
+        <view class="contract-wrap">
+            <view class="contract-wrap-item contract">
+                <text>联系客服</text>
+                <text>400-618-400</text>
+            </view>
+            <view class="contract-wrap-item">
+                <text>意见反馈</text>
+            </view>
+            <view class="contract-wrap-item">
+                <text>关于我们</text>
             </view>
         </view>
     </view>

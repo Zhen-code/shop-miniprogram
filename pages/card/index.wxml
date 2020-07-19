@@ -1,0 +1,3 @@
+<tabs tabs="{{tabs}}" bind:tabItemChange="handleItemChange">
+<view>6666</view>
+</tabs>

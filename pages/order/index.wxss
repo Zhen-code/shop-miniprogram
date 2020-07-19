@@ -93,3 +93,39 @@ page{
 .order-text{
     font-size: 24rpx;
 }
+.address-wrap{
+    height: 90rpx;
+    width: 90%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 40%;
+    font-size: 24rpx;
+    display: flex;
+    align-items: center;
+}
+.contract-wrap{
+    position: absolute;
+    width: 90%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 60%;
+}
+.contract-wrap-item{
+    height: 90rpx;
+    width: 100%;
+    font-size: 24rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #ccc;
+    padding: 0 10rpx;
+}
+.contract-wrap-item .contract{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
